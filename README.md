@@ -10,9 +10,8 @@ The script will install zsh and setup a elixir/phoenix development environment.
 
 ```
 cd
-wget https://raw.githubusercontent.com/civilcode/cloud9/bootstrap/master/cloud9
-chmod a+x cloud9
-./cloud9
+wget https://raw.githubusercontent.com/civilcode/cloud9-bootstrap/master/install.sh
+sh ./install.sh
 ```
 
 Format watcher for linux
