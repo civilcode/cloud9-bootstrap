@@ -15,7 +15,7 @@ The script will install zsh and setup a elixir/phoenix development environment.
 ```
 cd
 wget https://raw.githubusercontent.com/civilcode/cloud9-bootstrap/master/install.sh
-sudo sh ./install.sh
+sh ./install.sh
 ```
 
 ## Share environment with the team

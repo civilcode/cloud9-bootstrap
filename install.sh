@@ -91,7 +91,7 @@ default = current " >> ~/.gitconfig
 fi
 
 # Install tooling
-yum install zsh python unzip build-essential auto-conf libncurses5-dev libssh-dev unixodbc-dev m4 inotify-tools
+sudo yum install zsh python unzip build-essential auto-conf libncurses5-dev libssh-dev unixodbc-dev m4 inotify-tools
 
 
 # ASDF - version manager
