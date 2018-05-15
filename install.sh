@@ -76,9 +76,7 @@ gem_install_or_update() {
   fi
 }
 
-if ! [ -f "$HOME/.gitconfig" ]; then
-    echo "
-
+echo "
 [core]
         editor = /usr/bin/vim
 [alias]
@@ -90,8 +88,8 @@ if ! [ -f "$HOME/.gitconfig" ]; then
         dfc = diff --cached
         quick-amend = amend --no-edit
 [push]
-        default = current " > ~/.gitconfig
-fi
+        default = current
+" > ~/.gitconfig
 
 # Install tooling
 sudo yum install zsh python unzip build-essential auto-conf libncurses5-dev libssh-dev unixodbc-dev m4 inotify-tools
