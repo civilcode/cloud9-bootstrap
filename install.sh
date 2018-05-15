@@ -82,15 +82,15 @@ if ! [ -f "$HOME/.gitconfig" ]; then
 [core]
         editor = /usr/bin/vim
 [alias]
-co = checkout
-st = status
-ci = commit
-cis = commit -S
-df = diff
-dfc = diff --cached
-quick-amend = amend --no-edit
+        co = checkout
+        st = status
+        ci = commit
+        cis = commit -S
+        df = diff
+        dfc = diff --cached
+        quick-amend = amend --no-edit
 [push]
-default = current " > ~/.gitconfig
+        default = current " > ~/.gitconfig
 fi
 
 # Install tooling
