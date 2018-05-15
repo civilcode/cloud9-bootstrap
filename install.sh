@@ -78,6 +78,9 @@ gem_install_or_update() {
 
 if ! [ -f "$HOME/.gitconfig" ]; then
     echo "
+
+[core]
+        editor = /usr/bin/vim
 [alias]
 co = checkout
 st = status
@@ -87,7 +90,7 @@ df = diff
 dfc = diff --cached
 quick-amend = amend --no-edit
 [push]
-default = current " >> ~/.gitconfig
+default = current " > ~/.gitconfig
 fi
 
 # Install tooling
