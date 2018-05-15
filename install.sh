@@ -161,4 +161,4 @@ fi
 
 # Install hub
 go get github.com/github/hub
-sudo cp ~/.golang/bin/hub /usr/local/bin
+sudo cp ~/.asdf/installs/golang/1.9/packages/bin/hub /usr/local/bin
