@@ -1,8 +1,12 @@
 Setup an EC2 instance
 ---------------------
-Create first an EC2 instance from a Debian-based flavor.
-- Make sure that the EC2 is available publicly via SSH. Then, copy the SSH Key provided by Cloud9 when trying to connect to an existing instance in `~/.ssh/authorized_keys`
-- Install a capable machine depending on the project. A project using Docker extensively requires both extra hard-drive space and memory.
+Login to Amazon AWS, choose cloud9 service and in `your environements` tab choose
+to `Create environment.`
+
+When prompted with environment settings choose:
+- `Create a new instance for environment(EC2)`
+- `m4.large` as instance type if you use Docker extensively
+- leave cost saving setting set to 30 mins (default)
 
 Installation script
 -------------------
@@ -11,8 +15,12 @@ The script will install zsh and setup a elixir/phoenix development environment.
 ```
 cd
 wget https://raw.githubusercontent.com/civilcode/cloud9-bootstrap/master/install.sh
-sh ./install.sh
+sudo sh ./install.sh
 ```
+
+## Share environment with the team
+In the right top corner there is a share button which allows you to give access
+to cloud9 environment
 
 Format watcher for linux
 --------------------------------
