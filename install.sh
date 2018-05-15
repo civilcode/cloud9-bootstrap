@@ -76,20 +76,16 @@ gem_install_or_update() {
   fi
 }
 
-echo "
-[core]
-        editor = /usr/bin/vim
-[alias]
-        co = checkout
-        st = status
-        ci = commit
-        cis = commit -S
-        df = diff
-        dfc = diff --cached
-        quick-amend = amend --no-edit
-[push]
-        default = current
-" > ~/.gitconfig
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.df diff
+git config --global alias.dfc 'diff --cached'
+git config --global alias.quick-amend 'commit --amend --no-edit'
+git config --global core.editor vim
+git config --global push.default current
+
+# Cache git credentials for a minute
+git config --global credential.helper 'cache --timeout=3600'
 
 # Install tooling
 sudo yum install zsh python unzip build-essential auto-conf libncurses5-dev libssh-dev unixodbc-dev m4 inotify-tools
@@ -162,9 +158,6 @@ fi
 if ! grep --quiet "source $HOME/.civilcode.zshrc" $HOME/.zshrc;  then
     append_to_zshrc '[[ -f ~/.civilcode.zshrc ]] && source $HOME/.civilcode.zshrc'
 fi
-
-# Cache git credentials for a minute
-git config --global credential.helper 'cache --timeout=3600'
 
 # Install hub
 go get github.com/github/hub
