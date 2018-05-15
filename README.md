@@ -10,7 +10,7 @@ When prompted with environment settings choose:
 
 Installation script
 -------------------
-The script will install zsh and setup a elixir/phoenix development environment.
+The script will install zsh and setup a elixir/phoenix development environment. The script has to be executed at the home root `~`.
 
 ```
 cd
