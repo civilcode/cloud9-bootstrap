@@ -134,6 +134,8 @@ fi
 
 if ! [ -d "$HOME/.asdf/plugins/nodejs" ]; then
   asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  # Imports Node.js release team's OpenPGP keys to main keyring
+  bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
   asdf install nodejs 7.4.0
   asdf global nodejs 7.4.0
 fi
