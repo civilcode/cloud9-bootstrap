@@ -123,6 +123,7 @@ if ! [ -d "$HOME/.asdf" ]; then
 
   append_to_bashrc ". $HOME/.asdf/asdf.sh"
   append_to_bashrc ". $HOME/.asdf/completions/asdf.bash"
+  append_to_bashrc "git config --global core.editor /usr/bin/vim"
 fi
 
 # Ensure ADSF is loaded
