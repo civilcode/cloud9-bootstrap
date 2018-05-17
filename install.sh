@@ -10,6 +10,25 @@ fancy_echo() {
   printf "\n$fmt\n" "$@"
 }
 
+append_to_bashrc() {
+    local text="$1" zshrc
+    local skip_new_line="${2:-0}"
+
+    if [ -w "$HOME/.bashrc.local" ]; then
+        bashrc="$HOME/.bashrc.local"
+    else
+        bashrc="$HOME/.bashrc"
+    fi
+
+    if ! grep -Fqs "$text" "$bashrc"; then
+        if [ "$skip_new_line" -eq 1 ]; then
+            printf "%s\n" "$text" >> "$bashrc"
+        else
+            printf "\n%s\n" "$text" >> "$bashrc"
+        fi
+    fi
+}
+
 append_to_zshrc() {
   local text="$1" zshrc
   local skip_new_line="${2:-0}"
@@ -98,6 +117,9 @@ if ! [ -d "$HOME/.asdf" ]; then
 
   append_to_zshrc ". $HOME/.asdf/asdf.sh"
   append_to_zshrc ". $HOME/.asdf/completions/asdf.bash"
+
+  append_to_bashrc ". $HOME/.asdf/asdf.sh"
+  append_to_bashrc ". $HOME/.asdf/completions/asdf.bash"
 fi
 
 # Ensure ADSF is loaded
