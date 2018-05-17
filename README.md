@@ -18,6 +18,20 @@ wget https://raw.githubusercontent.com/civilcode/cloud9-bootstrap/master/install
 sh ./install.sh
 ```
 
+## Co-authors (Optional)
+Set the main git user in `~/.gitconfig`. For example:
+```
+[user]
+        name = CivilCode Pairing
+        email = PAIRING_USER@users.noreply.github.com
+```
+
+## Co-authors (Optional)
+
+Set the list of git co-authors in `.gitmessage`.
+A co-author follows the convention: `Co-authored-by: Hugo Frappier <USER@users.noreply.github.com>`
+The email address can be found in Github `Settings > Emails` under `Keep my email address private`
+
 ## Share environment with the team
 In the right top corner there is a share button which allows you to give access
 to cloud9 environment
