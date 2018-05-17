@@ -106,6 +106,9 @@ git config --global push.default current
 # Cache git credentials for a minute
 git config --global credential.helper 'cache --timeout=3600'
 
+# Setup a template for commits with coauthors
+git config --global commit.template=~/.gitmessage
+
 # Install tooling
 sudo yum install zsh python unzip build-essential auto-conf libncurses5-dev libssh-dev unixodbc-dev m4 inotify-tools
 
