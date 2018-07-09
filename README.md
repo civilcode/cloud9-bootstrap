@@ -38,18 +38,34 @@ to cloud9 environment
 
 Format watcher for linux
 --------------------------------
-
+1. Create a file `file_watcher` in ~/enviroment
+2. Add Script for formatting files
 Script skeleton for incremental `mix format` when a file is touched.
+
 ``` {.bash}
 #!/bin/bash
 
-inotifywait -m ~/environment -e modify,create -e moved_to |
+inotifywait -r -m ~/environment -e modify,create -e moved_to |
     while read path action file; do
         if [[ $file =~ \.ex$ ]]; then
                 echo "('$action') The file '$path/$file' will be formatted"
                 mix format $path/$file
         fi
     done
+```
+
+3. Make it executable:
+
+```
+chmod +x format_watcher
+```
+
+4. Run the script and enjoy your formatted code:
+
+```
+~/environment $ ./format_watcher
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
 ```
 
 Testing
