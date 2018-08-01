@@ -38,10 +38,11 @@ RUN mkdir ~/Development && \
     env RCRC=$HOME/Development/dotfiles/rcrc rcup && \
     lsrc
 
-WORKDIR /app
+# add format watcher
+RUN cd /usr/local/bin && \
+    wget https://raw.githubusercontent.com/civilcode/cloud9-bootstrap/master/format_watcher && \
+    chmod +x format_watcher
 
-# The version 6.0.1 returned "npm ERR! write after end" sometimes
-# https://github.com/npm/npm/issues/19989
-# RUN npm i -g npm@6.1.0
+WORKDIR /app
 
 CMD ["zsh"]
