@@ -27,21 +27,3 @@ The script will configure the environment to for Docker.
 
 In the right top corner there is a share button which allows you to give access to the
 Cloud9 environment.
-
-## Setting up Docker
-
-### Configure the project
-
-Replace the `Dockerfile.dev` file with the `Dockerfile` contained in this repository. Customize as
-necessary. Follow the standard instructions for setting up a development environment with Docker.
-
-https://github.com/civilcode/magasin-platform#development-setup
-
-### About the Dockerfile
-
-The Dockerfile will produce an image with a full development environment (i.e. zsh, git, hub) and
-configure with [`dotfiles`](https://github.com/civilcode/dotfiles). This allows us to work within
-a running container. To do this, connect to the `application` container for the project:
-
-    docker-compose up -d # ensure containers are running
-    docker-compose exec application zsh
