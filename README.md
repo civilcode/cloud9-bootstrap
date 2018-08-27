@@ -17,7 +17,8 @@ When prompted for the environment settings choose:
 
 ### Installation script
 
-The script will configure the environment to for Docker.
+The script will configure the instance with our standard development environment and Docker.
+Please review the script to see what is installed.
 
     cd
     wget https://raw.githubusercontent.com/civilcode/cloud9-bootstrap/master/install.sh
@@ -25,5 +26,5 @@ The script will configure the environment to for Docker.
 
 ### Share environment with the team
 
-In the right top corner there is a share button which allows you to give access to the
+In the right top corner of the IDE click the share button which allows you to give access to the
 Cloud9 environment.
