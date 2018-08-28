@@ -20,9 +20,16 @@ When prompted for the environment settings choose:
 The script will configure the instance with our standard development environment and Docker.
 Please review the script to see what is installed.
 
-    cd
     wget https://raw.githubusercontent.com/civilcode/cloud9-bootstrap/master/install.sh
     sh ./install.sh
+
+## Testing
+
+To testing the install script:
+
+    docker build -t civilcode/amazonlinux .
+    docker run -it --rm -v $(pwd):/app civilcode/amazonlinux
+    sh  /app/install.sh
 
 ### Share environment with the team
 

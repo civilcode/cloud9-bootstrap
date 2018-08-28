@@ -42,4 +42,4 @@ env RCRC=$HOME/Development/dotfiles/rcrc rcup -f && lsrc
 echo "source $HOME/.civilcode.shrc" >> ~/.bashrc
 echo 'eval "$(direnv hook bash)"' >> ~/.shrc.local
 
-echo "Finished. Run `source ~/.bashrc`."
+echo "Finished. Run 'source ~/.bashrc'."
