@@ -10,7 +10,7 @@ if ! [ -d "$HOME/Development/dotfiles" ]; then
   cd ~/Development && \
     git clone https://github.com/civilcode/dotfiles.git
 else
-  cd ~/Development && \
+  cd ~/Development/dotfiles && \
    git pull --force
 fi
 
