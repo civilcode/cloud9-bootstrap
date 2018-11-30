@@ -59,7 +59,7 @@ if ! grep --quiet "source $HOME/.civilcode.shrc" $HOME/.bashrc;  then
   echo "source $HOME/.civilcode.shrc" >> ~/.bashrc
 fi
 
-if ! grep --quiet "eval "$(direnv hook bash)"" $HOME/.shrc.local;  then
+if ! grep --quiet "eval \"$(direnv hook bash)\"" $HOME/.shrc.local;  then
   echo 'eval "$(direnv hook bash)"' >> ~/.shrc.local
 fi
 
