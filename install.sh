@@ -55,6 +55,10 @@ fi
 # setup
 env RCRC=$HOME/Development/dotfiles/rcrc rcup -f && lsrc
 
+if ! [ -f "$HOME/.tmux.conf" ]; then
+  curl -L https://raw.githubusercontent.com/civilcode/cloud9-bootstrap/master/tmux.conf  -o ~/.tmux.conf
+fi
+
 if ! grep --quiet "source $HOME/.civilcode.shrc" $HOME/.bashrc;  then
   echo "source $HOME/.civilcode.shrc" >> ~/.bashrc
 fi
